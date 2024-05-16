@@ -1218,7 +1218,7 @@ endfunction
 " ------------------------------------------------------------------
 
 function! s:format_change(bufnr, offset, item)
-  return printf("%3d  %s  %4d  %3d  %s", a:bufnr, s:yellow(printf('%6s', a:offset)), a:item.lnum, a:item.col, getbufline(a:bufnr, a:item.lnum)[0])
+  return printf("%3d  %s  %4d  %3d  %s", a:bufnr, s:yellow(printf('%6s', a:offset)), a:item.lnum, a:item.col, getbufoneline(a:bufnr, a:item.lnum))
 endfunction
 
 function! s:changes_sink(lines)
